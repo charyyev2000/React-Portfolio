@@ -66,6 +66,9 @@ const Home = () => {
       <aside className="home_toggle">
         <Icon icon="icomoon-free:sun" />
       </aside>
+      <div className="circleFirst"></div>
+      <div className="circleSecond"></div>
+      <div className="circleThird"></div>
     </section>
   );
 };

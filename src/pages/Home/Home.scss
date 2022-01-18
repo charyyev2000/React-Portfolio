@@ -1,4 +1,4 @@
-@import "../index.scss";
+@import "/src/index.scss";
 
 .navbar {
   width: 100vw;
@@ -96,6 +96,16 @@
     a {
       color: $colorWhite;
       font-size: clamp(20px, 4vw, 40px);
+
+      &:hover {
+        cursor: pointer;
+        color: $colorSecondaryDark;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+      }
     }
   }
 
@@ -105,5 +115,67 @@
     right: 5vw;
     color: $colorWhite;
     font-size: clamp(20px, 4vw, 40px);
+
+    &:hover {
+      cursor: pointer;
+      color: $colorSecondaryDark;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+    }
   }
+}
+
+.circleFirst {
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  background: $colorCircleDark;
+  width: 1300px;
+  height: 1300px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: -1;
+  box-shadow: $circleShadow;
+  // filter: blur(50px);
+  // -webkit-filter: blur(50px);
+}
+
+.circleSecond {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background: $colorCircleDark;
+  top: -30%;
+  right: -20%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: -1;
+  box-shadow: $circleShadow;
+  // filter: blur(50px);
+  // -webkit-filter: blur(50px);
+}
+
+.circleThird {
+  position: absolute;
+  bottom: -40%;
+  right: 40%;
+  width: 500px;
+  height: 500px;
+  background: $colorCircleDark;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: -1;
+  box-shadow: $circleShadow;
 }
