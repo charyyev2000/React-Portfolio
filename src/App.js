@@ -1,8 +1,11 @@
+import Home from "./Home/Home";
+import "./index.scss";
+
 function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
