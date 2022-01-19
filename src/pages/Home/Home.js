@@ -1,12 +1,19 @@
 import React from "react";
-import "./Home.scss";
+// import "./Home.scss";
 import { Icon } from "@iconify/react";
+import {
+  ContactStyled,
+  HomeStyled,
+  Logo,
+  NavbarStyled,
+  Toggle,
+} from "./Home.styles";
 
-const Home = () => {
+const Home = ({ theme, toggleTheme }) => {
   return (
-    <section className="home">
-      <nav className="navbar center">
-        <h1 className="logo">Sh</h1>
+    <HomeStyled className="home">
+      <NavbarStyled className="navbar">
+        <Logo className="logo">Sh</Logo>
         <ul>
           <li>
             <a href="">
@@ -29,7 +36,7 @@ const Home = () => {
             </a>
           </li>
         </ul>
-      </nav>
+      </NavbarStyled>
 
       <div className="home_content">
         <h1>name</h1>
@@ -37,7 +44,7 @@ const Home = () => {
         <h2>Front-End Developer</h2>
       </div>
 
-      <aside className="home_aside">
+      <ContactStyled className="home_aside">
         <a
           href="https://github.com/ShatlykBerdiyew"
           title="Github"
@@ -61,15 +68,19 @@ const Home = () => {
         >
           <Icon icon="codicon:mail" />
         </a>
-      </aside>
+      </ContactStyled>
 
-      <aside className="home_toggle">
-        <Icon icon="icomoon-free:sun" />
-      </aside>
+      <Toggle onClick={toggleTheme}>
+        {theme === "light" ? (
+          <Icon icon="icomoon-free:sun" />
+        ) : (
+          <Icon icon="bx:bx-moon" />
+        )}
+      </Toggle>
       <div className="circleFirst"></div>
       <div className="circleSecond"></div>
       <div className="circleThird"></div>
-    </section>
+    </HomeStyled>
   );
 };
 
