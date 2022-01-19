@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "/React-Portfolio/static/css/main.60420c74.css",
-    "main.js": "/React-Portfolio/static/js/main.e92c88f6.js",
-    "static/media/Montserrat-SemiBold.ttf": "/React-Portfolio/static/media/Montserrat-SemiBold.04af9a9e62bb4c47bd55.ttf",
-    "static/media/Montserrat-ExtraBold.ttf": "/React-Portfolio/static/media/Montserrat-ExtraBold.5daafc620ecc802516f9.ttf",
-    "static/media/Montserrat-Medium.ttf": "/React-Portfolio/static/media/Montserrat-Medium.3a0917345468c959207a.ttf",
-    "static/media/Montserrat-Light.ttf": "/React-Portfolio/static/media/Montserrat-Light.f0963fd9968fbd54cc35.ttf",
-    "static/media/Montserrat-Regular.ttf": "/React-Portfolio/static/media/Montserrat-Regular.ac98a5f5ca71180fe293.ttf",
-    "static/media/Montserrat-Black.ttf": "/React-Portfolio/static/media/Montserrat-Black.1b9fba4a75b89b0dd96a.ttf",
-    "static/media/Montserrat-ExtraLight.ttf": "/React-Portfolio/static/media/Montserrat-ExtraLight.b70ef3d0e89b27907868.ttf",
-    "static/media/Montserrat-Thin.ttf": "/React-Portfolio/static/media/Montserrat-Thin.e8ecb9f79ef9cbd2d9a8.ttf",
-    "static/media/Montserrat-Bold.ttf": "/React-Portfolio/static/media/Montserrat-Bold.733964aa5261b1af4852.ttf",
+    "main.css": "/React-Portfolio/static/css/main.a67b71ed.css",
+    "main.js": "/React-Portfolio/static/js/main.5ea8d61d.js",
     "index.html": "/React-Portfolio/index.html",
-    "main.60420c74.css.map": "/React-Portfolio/static/css/main.60420c74.css.map",
-    "main.e92c88f6.js.map": "/React-Portfolio/static/js/main.e92c88f6.js.map"
+    "main.a67b71ed.css.map": "/React-Portfolio/static/css/main.a67b71ed.css.map",
+    "main.5ea8d61d.js.map": "/React-Portfolio/static/js/main.5ea8d61d.js.map"
   },
   "entrypoints": [
-    "static/css/main.60420c74.css",
-    "static/js/main.e92c88f6.js"
+    "static/css/main.a67b71ed.css",
+    "static/js/main.5ea8d61d.js"
   ]
 }
