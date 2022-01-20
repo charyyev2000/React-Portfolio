@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import { Circle } from "../../globalStyle";
 
@@ -40,6 +41,41 @@ export const HomeStyled = styled.section`
   }
 `;
 
+export const Links = styled.h1`
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  .active {
+    color: red;
+  }
+
+  h1 {
+    margin-right: 20px;
+    font-size: clamp(10px, 1.5vw, 20px);
+    cursor: pointer;
+    font-weight: 500;
+
+    color: ${({ theme }) => theme.primary};
+    text-decoration: none;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+
+    &:hover {
+      color: ${({ theme }) => theme.secondary};
+    }
+
+    span {
+      color: ${({ theme }) => theme.secondary};
+      margin-right: 5px;
+      font-weight: 700;
+    }
+  }
+`;
+
 export const NavbarStyled = styled.nav`
   width: 100vw;
   padding: 0 5vw;
@@ -51,31 +87,9 @@ export const NavbarStyled = styled.nav`
   left: 0;
 
   ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-
     li {
-      margin-right: 20px;
-      font-size: clamp(10px, 1.5vw, 20px);
-
       a {
-        color: ${({ theme }) => theme.primary};
-        text-decoration: none;
-        transition: all 0.2s ease;
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -ms-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-
-        &:hover {
-          color: ${({ theme }) => theme.secondary};
-        }
-
         span {
-          color: ${({ theme }) => theme.secondary};
-          margin-right: 5px;
-          font-weight: 700;
         }
       }
     }

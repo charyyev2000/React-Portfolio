@@ -9,7 +9,7 @@ import {
 
 const About = () => {
   return (
-    <AboutStyled className="center">
+    <AboutStyled className="center" id="about">
       <div style={{ width: "50%" }}>
         <AboutHeader className="about_header">
           More about me <span>. . .</span>

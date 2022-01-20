@@ -3,6 +3,8 @@ import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import { GlobalStyle, lightTheme, darkTheme } from "./globalStyle";
 import { ThemeProvider } from "styled-components";
+import Experience from "./pages/Experience/Experience";
+import Projects from "./pages/Projects/Projects";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -29,6 +31,8 @@ function App() {
         <GlobalStyle />
         <Home theme={theme} toggleTheme={toggleTheme} />
         <About />
+        <Experience />
+        <Projects />
       </ThemeProvider>
     </>
   );
