@@ -1,44 +1,9 @@
 .about {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   &_content {
-    width: 50%;
-
     &_header {
-      font-family: "Montserrat-SemiBold";
-      color: $colorWhite;
-      font-size: clamp(20px, 4vw, 50px);
-      margin-bottom: 10px;
-
-      span {
-        color: $colorSecondaryDark;
-      }
     }
 
     &_text {
-      color: $colorWhite;
-      font-size: clamp(15px, 3vw, 30px);
-
-      span {
-        color: $colorSecondaryDark;
-
-        a {
-          color: $colorSecondaryDark;
-          text-decoration: none;
-
-          &:hover {
-            color: $colorWhite;
-            transition: all 0.3s ease;
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-          }
-        }
-      }
     }
   }
 

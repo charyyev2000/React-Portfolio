@@ -39,6 +39,8 @@ export const darkTheme = {
   primary: "#ffffff",
   circle: "#115173",
   secondary: "#ffd700",
+  icon: "#ffffff",
+  iconSecondary: "#ffd700",
 };
 
 export const lightTheme = {
@@ -46,6 +48,8 @@ export const lightTheme = {
   primary: "#E8AA8C",
   circle: "#E2DCD5",
   secondary: "#5E616A",
+  icon: "#5E616A",
+  iconSecondary: "#E8AA8C",
 };
 
 export const Circle = css`

@@ -28,7 +28,7 @@ function App() {
       <ThemeProvider theme={themeMode}>
         <GlobalStyle />
         <Home theme={theme} toggleTheme={toggleTheme} />
-        {/* <About /> */}
+        <About />
       </ThemeProvider>
     </>
   );

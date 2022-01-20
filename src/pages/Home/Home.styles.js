@@ -1,39 +1,19 @@
 import styled from "styled-components";
 import { Circle } from "../../globalStyle";
 
-export const HomeStyled = styled.nav`
-  .home {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+// export const s = {
+//   xxl: "1536px",
+//   xl: "1280px",
+//   lg: "1024px",
+//   md: "768px",
+//   sm: "640px",
+//   xs: "475px",
+// };
 
-    &_content {
-      width: 60vw;
-      margin: auto;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-
-      h1 {
-        font-size: clamp(50px, 20vw, 120px);
-        color: ;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        line-height: 1;
-      }
-
-      h2 {
-        color: ;
-        font-size: clamp(30px, 12vw, 90px);
-        white-space: nowrap;
-      }
-    }
-  }
+export const HomeStyled = styled.section`
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 
   .circleFirst {
     ${Circle}
@@ -102,6 +82,34 @@ export const NavbarStyled = styled.nav`
   }
 `;
 
+export const HomeContent = styled.div`
+  width: 60vw;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+
+  h1 {
+    font-size: clamp(50px, 20vw, 120px);
+    color: ${({ theme }) => theme.primary};
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  h2 {
+    color: ${({ theme }) => theme.secondary};
+    font-size: clamp(30px, 12vw, 90px);
+    white-space: nowrap;
+  }
+`;
+
 export const Logo = styled.h1`
   font-size: clamp(40px, 4vw, 120px);
   color: ${({ theme }) => theme.secondary};
@@ -119,8 +127,7 @@ export const ContactStyled = styled.div`
   flex-direction: column;
 
   a {
-    color: ${({ theme }) =>
-      theme === "light" ? theme.primary : theme.secondary};
+    color: ${({ theme }) => theme.icon};
     font-size: clamp(20px, 4vw, 40px);
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -130,8 +137,7 @@ export const ContactStyled = styled.div`
 
     &:hover {
       cursor: pointer;
-      color: ${({ theme }) =>
-        theme === "light" ? theme.secondary : theme.primary};
+      color: ${({ theme }) => theme.iconSecondary};
     }
   }
 `;
@@ -140,7 +146,7 @@ export const Toggle = styled.div`
   position: fixed;
   top: 90vh;
   right: 5vw;
-  color: ${({ theme }) => (theme === "dark" ? "white" : theme.secondary)};
+  color: ${({ theme }) => theme.icon};
   font-size: clamp(20px, 4vw, 40px);
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -150,6 +156,6 @@ export const Toggle = styled.div`
 
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.iconSecondary};
   }
 `;

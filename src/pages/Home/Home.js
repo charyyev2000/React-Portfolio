@@ -3,6 +3,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import {
   ContactStyled,
+  HomeContent,
   HomeStyled,
   Logo,
   NavbarStyled,
@@ -38,11 +39,11 @@ const Home = ({ theme, toggleTheme }) => {
         </ul>
       </NavbarStyled>
 
-      <div className="home_content">
+      <HomeContent>
         <h1>name</h1>
         <h1>last</h1>
         <h2>Front-End Developer</h2>
-      </div>
+      </HomeContent>
 
       <ContactStyled className="home_aside">
         <a
