@@ -31,7 +31,7 @@ function App() {
         <GlobalStyle />
         <Home theme={theme} toggleTheme={toggleTheme} />
         <About />
-        <Experience />
+        {/* <Experience /> */}
         <Projects />
       </ThemeProvider>
     </>

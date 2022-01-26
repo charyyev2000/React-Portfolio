@@ -85,6 +85,7 @@ export const NavbarStyled = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 20;
 
   ul {
     li {
