@@ -30,6 +30,7 @@ body {
      -moz-transition: background 0.5s ease;
      -ms-transition: background 0.5s ease;
      -o-transition: background 0.5s ease;
+     overflow-x: hidden;
 }
 
 `;
@@ -41,6 +42,7 @@ export const darkTheme = {
   secondary: "#ffd700",
   icon: "#ffffff",
   iconSecondary: "#ffd700",
+  toggle: "#ffffff",
 };
 
 export const lightTheme = {
@@ -50,6 +52,7 @@ export const lightTheme = {
   secondary: "#5E616A",
   icon: "#5E616A",
   iconSecondary: "#E8AA8C",
+  toggle: "#5E616A",
 };
 
 export const Circle = css`

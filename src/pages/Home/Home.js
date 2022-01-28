@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 // import "./Home.scss";
 import { Icon } from "@iconify/react";
 import {
+  BurgerButton,
   ContactStyled,
   HomeContent,
   HomeStyled,
@@ -37,11 +38,21 @@ const links = [
 ];
 
 const Home = ({ theme, toggleTheme }) => {
+  const [open, setOpen] = useState(false);
+
+  // const btn = document.querySelector(".toggle");
+
+  // btn.addEventListener("click", () => {
+  //   btn
+  //     .querySelectorAll("span")
+  //     .forEach((span) => span.classList.toggle("open"));
+  // });
+
   return (
     <HomeStyled className="home" id="home">
       <NavbarStyled className="navbar">
         <Logo className="logo">Sh</Logo>
-        <Links>
+        <Links open={open} setOpen={setOpen}>
           {links.map((link) => {
             return (
               <Link
@@ -54,7 +65,7 @@ const Home = ({ theme, toggleTheme }) => {
                 isDynamic={true}
                 ignoreCancelEvents={false}
               >
-                <h1>
+                <h1 onClick={() => setOpen(!open)}>
                   <span>{link.no}</span>
                   {link.name}
                 </h1>
@@ -62,28 +73,16 @@ const Home = ({ theme, toggleTheme }) => {
             );
           })}
         </Links>
-        {/* <ul>
-          <li>
-            <a href="">
-              <span>01.</span>Home
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>02.</span>About
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>03.</span>Experience
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>04.</span>Projects
-            </a>
-          </li>
-        </ul> */}
+        <BurgerButton
+          open={open}
+          onClick={() => setOpen(!open)}
+          className="toggle"
+        >
+          <span className="box"></span>
+          <span className="rectangle rectangle-top rectangle-small"></span>
+          <span className="rectangle rectangle-middle"></span>
+          <span className="rectangle rectangle-bottom rectangle-small"></span>
+        </BurgerButton>
       </NavbarStyled>
 
       <HomeContent>

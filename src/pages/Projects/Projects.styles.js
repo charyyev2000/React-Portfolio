@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ProjectsStyled = styled.section`
   height: 100%;
-  // background: red;
 `;
 
 export const ProjectContent = styled.div`
@@ -40,10 +39,11 @@ export const ProjectText = styled.div`
   }
 
   .projectContent {
-    padding: 30px;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.5);
     font-size: clamp(25px, 2vw, 20px);
     color: white;
+    height: 100%;
     border-radius: 15px;
     box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.5);
     // min-height: 250px;
