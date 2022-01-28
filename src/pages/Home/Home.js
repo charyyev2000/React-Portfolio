@@ -9,7 +9,7 @@ import {
   Logo,
   NavbarLink,
   NavbarStyled,
-  Toggle,
+  Toggle
 } from "./Home.styles";
 import { Link } from "react-scroll";
 
@@ -17,23 +17,23 @@ const links = [
   {
     no: "01.",
     id: "home",
-    name: "Home",
+    name: "Home"
   },
   {
     no: "02.",
     id: "about",
-    name: "About",
+    name: "About"
   },
   {
     no: "03.",
     id: "experience",
-    name: "Experience",
+    name: "Experience"
   },
   {
     no: "04.",
     id: "projects",
-    name: "Projects",
-  },
+    name: "Projects"
+  }
 ];
 
 const Home = ({ theme, toggleTheme }) => {
@@ -62,28 +62,6 @@ const Home = ({ theme, toggleTheme }) => {
             );
           })}
         </Links>
-        {/* <ul>
-          <li>
-            <a href="">
-              <span>01.</span>Home
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>02.</span>About
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>03.</span>Experience
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>04.</span>Projects
-            </a>
-          </li>
-        </ul> */}
       </NavbarStyled>
 
       <HomeContent>
