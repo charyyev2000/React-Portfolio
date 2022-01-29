@@ -13,6 +13,7 @@ export const ProjectContent = styled.div`
   position: relative;
   margin-top: 150px;
   transition: all 0.3s ease;
+  // opacity: 0;
 
   @media screen and (max-width: 475px) {
     min-width: 100%;
@@ -96,6 +97,7 @@ export const ProjectText = styled.div`
     text-align: right;
     width: 100%;
     justify-content: flex-end;
+
     p {
       color: ${({ theme }) => theme.secondary};
       text-decoration: none;

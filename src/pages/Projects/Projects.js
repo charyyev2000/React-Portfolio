@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   ProjectContent,
   ProjectImg,
@@ -7,17 +7,37 @@ import {
 } from "./Projects.styles";
 // import Image from "../e-blilim.jpg";
 import { Data } from "../../data";
+import { useIntersection } from "react-use";
+import gsap from "gsap";
 
 const Projects = () => {
+  // const ref = useRef(null);
+
+  // useEffect(() => {
+  //   gsap.to(".fadeIn", {
+  //     x: 100,
+  //     // opacity: 0,
+  //     duration: 2,
+  //     ease: "bounce",
+  //     delay: 1,
+  //     scrollTrigger: {
+  //       trigger: ".fadeIn",
+  //       markers: true,
+  //       start: "top center",
+  //     },
+  //   });
+  // }, []);
+
   return (
     <ProjectsStyled className="center" id="projects">
       {Data.map((item, id) => {
         return (
           <ProjectContent key={id}>
             <ProjectImg
+              className="fadeIn"
               bgImage={process.env.PUBLIC_URL + `/images/${item.name}.jpg`}
             />
-            <ProjectText>
+            <ProjectText className="fadeOut">
               <h1>{item.name}</h1>
               <p className="projectContent">{item.description}</p>
 
