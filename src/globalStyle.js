@@ -16,6 +16,14 @@ html {
 .center {
     width: 80vw;
     margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+      width: 85vw;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 87vw;
+    }
 }
 
 img {

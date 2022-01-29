@@ -13,7 +13,7 @@ const Projects = () => {
     <ProjectsStyled className="center" id="projects">
       {Data.map((item, id) => {
         return (
-          <ProjectContent>
+          <ProjectContent key={id}>
             <ProjectImg
               bgImage={process.env.PUBLIC_URL + `/images/${item.name}.jpg`}
             />
@@ -21,9 +21,11 @@ const Projects = () => {
               <h1>{item.name}</h1>
               <p className="projectContent">{item.description}</p>
 
-              <p className="tools" href="">
-                {item.tools}
-              </p>
+              <div className="tools">
+                {item.tools.map((tool, i) => (
+                  <p key={i}>{tool}</p>
+                ))}
+              </div>
               <div className="sources">
                 <a href="">
                   <svg

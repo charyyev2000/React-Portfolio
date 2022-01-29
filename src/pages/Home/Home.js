@@ -53,11 +53,12 @@ const Home = ({ theme, toggleTheme }) => {
       <NavbarStyled className="navbar">
         <Logo className="logo">Sh</Logo>
         <Links open={open} setOpen={setOpen}>
-          {links.map((link) => {
+          {links.map((link, id) => {
             return (
               <Link
                 activeClass="active"
                 to={link.id}
+                key={id}
                 spy={true}
                 smooth={true}
                 hashSpy={true}
