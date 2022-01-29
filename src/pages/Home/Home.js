@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 // import "./Home.scss";
 import { Icon } from "@iconify/react";
 import {
+  BurgerButton,
   ContactStyled,
   HomeContent,
   HomeStyled,
@@ -37,16 +38,27 @@ const links = [
 ];
 
 const Home = ({ theme, toggleTheme }) => {
+  const [open, setOpen] = useState(false);
+
+  // const btn = document.querySelector(".toggle");
+
+  // btn.addEventListener("click", () => {
+  //   btn
+  //     .querySelectorAll("span")
+  //     .forEach((span) => span.classList.toggle("open"));
+  // });
+
   return (
     <HomeStyled className="home" id="home">
       <NavbarStyled className="navbar">
         <Logo className="logo">Sh</Logo>
-        <Links>
-          {links.map((link) => {
+        <Links open={open} setOpen={setOpen}>
+          {links.map((link, id) => {
             return (
               <Link
                 activeClass="active"
                 to={link.id}
+                key={id}
                 spy={true}
                 smooth={true}
                 hashSpy={true}
@@ -54,7 +66,7 @@ const Home = ({ theme, toggleTheme }) => {
                 isDynamic={true}
                 ignoreCancelEvents={false}
               >
-                <h1>
+                <h1 onClick={() => setOpen(!open)}>
                   <span>{link.no}</span>
                   {link.name}
                 </h1>
@@ -62,6 +74,16 @@ const Home = ({ theme, toggleTheme }) => {
             );
           })}
         </Links>
+        <BurgerButton
+          open={open}
+          onClick={() => setOpen(!open)}
+          className="toggle"
+        >
+          <span className="box"></span>
+          <span className="rectangle rectangle-top rectangle-small"></span>
+          <span className="rectangle rectangle-middle"></span>
+          <span className="rectangle rectangle-bottom rectangle-small"></span>
+        </BurgerButton>
       </NavbarStyled>
 
       <HomeContent>

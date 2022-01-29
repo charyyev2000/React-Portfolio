@@ -5,21 +5,41 @@ export const AboutStyled = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
-export const AboutHeader = styled.h1`
+export const AboutContent = styled.div`
+  width: 50%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const AboutContentHeader = styled.h1`
   color: ${({ theme }) => theme.primary};
-  font-size: clamp(30px, 4vw, 40px);
+  font-size: clamp(30px, 6vw, 50px);
   margin-bottom: 10px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
 
   span {
     color: ${({ theme }) => theme.secondary};
   }
 `;
 
-export const AboutText = styled.p`
+export const AboutContentText = styled.p`
   color: ${({ theme }) => theme.primary};
-  font-size: clamp(15px, 3vw, 30px);
+  font-size: clamp(20px, 2vw, 30px);
+  transition: all 0.3s ease;
+
+  // @media screen and (max-width: 640px) {
+  //   font-size: 20px;
+  // }
 
   span {
     color: ${({ theme }) => theme.secondary};
@@ -28,6 +48,18 @@ export const AboutText = styled.p`
   a {
     color: ${({ theme }) => theme.secondary};
     text-decoration: none;
+    position: relative;
+
+    // &::after{
+    //   position: absolute;
+    //   content: '',
+    //   left: 0;
+    //   bottom: 0;
+    //   width: 100%;
+    //   height: 2px;
+
+    //   background: ${({ theme }) => theme.secondary};
+    // }
 
     &:hover {
       color: #ffffff;
@@ -42,4 +74,9 @@ export const AboutText = styled.p`
 
 export const IconCloud = styled.div`
   width: 50%;
+  background: red;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
