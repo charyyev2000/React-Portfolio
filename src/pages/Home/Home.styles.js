@@ -22,6 +22,7 @@ export const HomeStyled = styled.section`
     left: -20%;
     width: 1300px;
     height: 1300px;
+    // scale: 0.2;
   }
 
   .circleSecond {

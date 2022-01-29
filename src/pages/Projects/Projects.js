@@ -3,7 +3,7 @@ import {
   ProjectContent,
   ProjectImg,
   ProjectsStyled,
-  ProjectText,
+  ProjectText
 } from "./Projects.styles";
 // import Image from "../e-blilim.jpg";
 import { Data } from "../../data";

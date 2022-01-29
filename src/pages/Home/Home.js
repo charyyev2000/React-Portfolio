@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import "./Home.scss";
 import { Icon } from "@iconify/react";
 import {
@@ -13,6 +13,7 @@ import {
   Toggle
 } from "./Home.styles";
 import { Link } from "react-scroll";
+import gsap from "gsap";
 
 const links = [
   {
@@ -40,13 +41,15 @@ const links = [
 const Home = ({ theme, toggleTheme }) => {
   const [open, setOpen] = useState(false);
 
-  // const btn = document.querySelector(".toggle");
+  const ref = useRef(null);
 
-  // btn.addEventListener("click", () => {
-  //   btn
-  //     .querySelectorAll("span")
-  //     .forEach((span) => span.classList.toggle("open"));
-  // });
+  // useEffect(() => {
+  //   gsap.to(".circleFirst", {
+  //     scale: 1,
+  //     duration: 1,
+  //     delay: 1
+  //   });
+  // }, []);
 
   return (
     <HomeStyled className="home" id="home">
@@ -125,7 +128,7 @@ const Home = ({ theme, toggleTheme }) => {
           <Icon icon="bx:bx-moon" />
         )}
       </Toggle>
-      <div className="circleFirst"></div>
+      <div className="circleFirst" ref={ref}></div>
       <div className="circleSecond"></div>
       <div className="circleThird"></div>
     </HomeStyled>
