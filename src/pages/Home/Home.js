@@ -51,6 +51,26 @@ const Home = ({ theme, toggleTheme }) => {
   //   });
   // }, []);
 
+  useEffect(() => {
+    gsap.fromTo(
+      HomeContent,
+      { y: -250 },
+      {
+        y: 0,
+        duration: 3,
+        stagger: 0.3
+        // scrollTrigger: {
+        //   trigger: HomeContent,
+        //   scrub: true,
+        //   start: "top bottom",
+        //   end: "top 20%",
+        //   immediateRender: false,
+        //   markers: true
+        // }
+      }
+    );
+  });
+
   return (
     <HomeStyled className="home" id="home">
       <NavbarStyled className="navbar">
@@ -90,8 +110,8 @@ const Home = ({ theme, toggleTheme }) => {
       </NavbarStyled>
 
       <HomeContent>
-        <h1>name</h1>
-        <h1>last</h1>
+        <h1 className="name">name</h1>
+        <h1 className="last">last</h1>
         <h2>Front-End Developer</h2>
       </HomeContent>
 

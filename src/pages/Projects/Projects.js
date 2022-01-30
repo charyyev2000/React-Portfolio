@@ -13,20 +13,14 @@ import gsap from "gsap";
 const Projects = () => {
   // const ref = useRef(null);
 
-  // useEffect(() => {
-  //   gsap.to(".fadeIn", {
-  //     x: 100,
-  //     // opacity: 0,
-  //     duration: 2,
-  //     ease: "bounce",
-  //     delay: 1,
-  //     scrollTrigger: {
-  //       trigger: ".fadeIn",
-  //       markers: true,
-  //       start: "top center",
-  //     },
-  //   });
-  // }, []);
+  gsap.to(".fadeIn", {
+    x: 700,
+    duration: 5,
+    scrollTrigger: {
+      trigger: ".fadeIn",
+      start: "top center"
+    }
+  });
 
   return (
     <ProjectsStyled className="center" id="projects">
