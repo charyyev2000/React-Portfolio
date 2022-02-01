@@ -1,46 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 // import "./Home.scss";
-import { Icon } from "@iconify/react";
-import {
-  BurgerButton,
-  ContactStyled,
-  HomeContent,
-  HomeStyled,
-  Links,
-  Logo,
-  NavbarLink,
-  NavbarStyled,
-  Toggle
-} from "./Home.styles";
-import { Link } from "react-scroll";
+import { ContactStyled, HomeContent, HomeStyled, Toggle } from "./Home.styles";
 import gsap from "gsap";
 
-const links = [
-  {
-    no: "01.",
-    id: "home",
-    name: "Home"
-  },
-  {
-    no: "02.",
-    id: "about",
-    name: "About"
-  },
-  {
-    no: "03.",
-    id: "experience",
-    name: "Experience"
-  },
-  {
-    no: "04.",
-    id: "projects",
-    name: "Projects"
-  }
-];
-
-const Home = ({ theme, toggleTheme }) => {
-  const [open, setOpen] = useState(false);
-
+const Home = () => {
   const ref = useRef(null);
 
   // useEffect(() => {
@@ -51,103 +14,14 @@ const Home = ({ theme, toggleTheme }) => {
   //   });
   // }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      HomeContent,
-      { y: -250 },
-      {
-        y: 0,
-        duration: 3,
-        stagger: 0.3
-        // scrollTrigger: {
-        //   trigger: HomeContent,
-        //   scrub: true,
-        //   start: "top bottom",
-        //   end: "top 20%",
-        //   immediateRender: false,
-        //   markers: true
-        // }
-      }
-    );
-  });
-
   return (
     <HomeStyled className="home" id="home">
-      <NavbarStyled className="navbar">
-        <Logo className="logo">Sh</Logo>
-        <Links open={open} setOpen={setOpen}>
-          {links.map((link, id) => {
-            return (
-              <Link
-                activeClass="active"
-                to={link.id}
-                key={id}
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                duration={500}
-                isDynamic={true}
-                ignoreCancelEvents={false}
-              >
-                <h1 onClick={() => setOpen(!open)}>
-                  <span>{link.no}</span>
-                  {link.name}
-                </h1>
-              </Link>
-            );
-          })}
-        </Links>
-        <BurgerButton
-          open={open}
-          onClick={() => setOpen(!open)}
-          className="toggle"
-        >
-          <span className="box"></span>
-          <span className="rectangle rectangle-top rectangle-small"></span>
-          <span className="rectangle rectangle-middle"></span>
-          <span className="rectangle rectangle-bottom rectangle-small"></span>
-        </BurgerButton>
-      </NavbarStyled>
-
       <HomeContent>
         <h1 className="name">name</h1>
         <h1 className="last">last</h1>
         <h2>Front-End Developer</h2>
       </HomeContent>
 
-      <ContactStyled className="home_aside">
-        <a
-          href="https://github.com/ShatlykBerdiyew"
-          title="Github"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon icon="iconoir:github-outline" />
-        </a>
-        <a
-          href="https://t.me/shatlykberdiyev"
-          title="Telegram"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon icon="tabler:brand-telegram" />
-        </a>
-        <a
-          href="mailto:ShatlykBerdiev@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon icon="codicon:mail" />
-        </a>
-      </ContactStyled>
-
-      <Toggle onClick={toggleTheme}>
-        {theme === "light" ? (
-          <Icon icon="icomoon-free:sun" />
-        ) : (
-          <Icon icon="bx:bx-moon" />
-        )}
-      </Toggle>
       <div className="circleFirst" ref={ref}></div>
       <div className="circleSecond"></div>
       <div className="circleThird"></div>

@@ -3,7 +3,7 @@ import {
   ProjectContent,
   ProjectImg,
   ProjectsStyled,
-  ProjectText
+  ProjectText,
 } from "./Projects.styles";
 // import Image from "../e-blilim.jpg";
 import { Data } from "../../data";
@@ -13,14 +13,43 @@ import gsap from "gsap";
 const Projects = () => {
   // const ref = useRef(null);
 
-  gsap.to(".fadeIn", {
-    x: 700,
-    duration: 5,
-    scrollTrigger: {
-      trigger: ".fadeIn",
-      start: "top center"
-    }
-  });
+  // gsap.to(".projectImg", {
+  //   scale: 0.95,
+  //   delay: 2,
+  //   duration: 5,
+  //   scrollTrigger: {
+  //     trigger: ".projectImg",
+  //     start: "center center",
+  //     end: "top 100px",
+  //     scrub: true,
+  //     markers: true,
+  //   },
+  // });
+
+  // gsap
+  //   .timeline({
+  //     scrollTrigger: {
+  //       trigger: ".projectImg",
+  //       scrub: true,
+  //       start: "center center",
+  //       end: " top 100px",
+  //       markers: true,
+  //     },
+  //   })
+  //   .fromTo(
+  //     ".projectImg",
+  //     {
+  //       y: 300,
+  //       opacity: 0,
+  //     },
+  //     {
+  //       y: 0,
+  //       opacity: 1,
+  //       duration: 1,
+  //       delay: 1,
+  //       ease: "none",
+  //     }
+  //   );
 
   return (
     <ProjectsStyled className="center" id="projects">
@@ -28,7 +57,7 @@ const Projects = () => {
         return (
           <ProjectContent key={id}>
             <ProjectImg
-              className="fadeIn"
+              className="projectImg"
               bgImage={process.env.PUBLIC_URL + `/images/${item.name}.jpg`}
             />
             <ProjectText className="fadeOut">

@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import { GlobalStyle, lightTheme, darkTheme } from "./globalStyle";
 import { ThemeProvider } from "styled-components";
 import Experience from "./pages/Experience/Experience";
 import Projects from "./pages/Projects/Projects";
+import gsap from "gsap/all";
+import locomotiveScroll from "locomotive-scroll";
+import Navbar from "./pages/Navbar/Navbar";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -25,14 +28,26 @@ function App() {
 
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
+  const scrollRef = useRef();
+
+  useEffect(() => {
+    const scroll = new locomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+    });
+  });
+
   return (
     <>
       <ThemeProvider theme={themeMode}>
         <GlobalStyle />
-        <Home theme={theme} toggleTheme={toggleTheme} />
-        <About />
-        {/* <Experience /> */}
-        <Projects />
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <div id="container" className="scroll" ref={scrollRef} data-scroll>
+          <Home />
+          <About />
+          {/* <Experience  /> */}
+          <Projects />
+        </div>
       </ThemeProvider>
     </>
   );
