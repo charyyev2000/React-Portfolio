@@ -43,18 +43,19 @@ export const HomeStyled = styled.section`
 
   @media screen and (max-width: 475px) {
     .circleFirst {
-      width: 300px;
-      height: 300px;
-      top: 50%;
-      right: 50%;
+      width: 350px;
+      height: 350px;
+      top: 35%;
+      left: 50%;
       // background: red;
     }
 
     .circleSecond {
-      width: 200px;
-      height: 200px;
-      top: 0;
-      left: 0;
+      width: 400px;
+      height: 400px;
+      top: -20%;
+      left: -20%;
+      // background: red;
     }
 
     .circleThird {

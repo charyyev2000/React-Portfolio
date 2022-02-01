@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ProjectsStyled = styled.section`
   height: 100%;
+  padding-bottom: 100px;
 `;
 
 export const ProjectContent = styled.div`
@@ -67,6 +68,8 @@ export const ProjectText = styled.div`
     font-size: clamp(30px, 5vw, 50px);
     padding-right: 20px;
     transition: all 0.3s ease;
+    font-weight: 700;
+    cursor: pointer;
     color: ${({ theme }) => theme.secondary};
 
     @media screen and (max-width: 640px) {

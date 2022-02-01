@@ -42,6 +42,17 @@ body {
      overflow-x: hidden;
 }
 
+.footer {
+  width: 100%;
+  h1 {
+    font-size: clamp(20px, 3vw, 30px);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+}
+
 `;
 
 export const darkTheme = {

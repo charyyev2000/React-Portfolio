@@ -4,8 +4,9 @@ import {
   AboutContentHeader,
   AboutContentText,
   AboutStyled,
-  IconCloud,
+  IconCloudStyled,
 } from "./About.styles";
+import { Cloud } from "react-icon-cloud";
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
           section<span>.</span>
         </AboutContentText>
       </AboutContent>
-      <IconCloud></IconCloud>
+      <IconCloudStyled></IconCloudStyled>
     </AboutStyled>
   );
 };

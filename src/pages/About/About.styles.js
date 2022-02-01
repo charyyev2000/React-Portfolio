@@ -72,7 +72,7 @@ export const AboutContentText = styled.p`
   }
 `;
 
-export const IconCloud = styled.div`
+export const IconCloudStyled = styled.div`
   width: 50%;
   background: red;
 

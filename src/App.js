@@ -58,8 +58,11 @@ function App() {
         >
           <Home />
           <About />
-          {/* <Experience  /> */}
+          <Experience />
           <Projects />
+          <footer className="footer">
+            <h1>Designed & Built by Charyyev Myrat</h1>
+          </footer>
         </div>
       </ThemeProvider>
     </>

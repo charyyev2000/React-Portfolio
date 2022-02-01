@@ -61,7 +61,7 @@ const Projects = () => {
               bgImage={process.env.PUBLIC_URL + `/images/${item.name}.jpg`}
             />
             <ProjectText className="fadeOut">
-              <h1>{item.name}</h1>
+              <h1 href={item.link}>{item.name}</h1>
               <p className="projectContent">{item.description}</p>
 
               <div className="tools">
