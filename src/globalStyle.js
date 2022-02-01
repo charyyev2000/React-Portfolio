@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
 html, body {
     font-size: 62.5%;
-    overflow-x: hidden;
+    overflow: hidden;
     max-width:100vw;
     scroll-behavior: smooth;
 }

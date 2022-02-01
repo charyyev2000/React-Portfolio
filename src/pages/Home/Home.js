@@ -6,13 +6,39 @@ import gsap from "gsap";
 const Home = () => {
   const ref = useRef(null);
 
-  // useEffect(() => {
-  //   gsap.to(".circleFirst", {
-  //     scale: 1,
-  //     duration: 1,
-  //     delay: 1
-  //   });
-  // }, []);
+  let tl = gsap.timeline();
+
+  useEffect(() => {
+    tl.from(
+      ".name",
+      {
+        y: -100,
+        opacity: 0,
+        duration: 0.7,
+        delay: 0.5,
+        ease: "Power1.ease",
+      },
+      "+=.5"
+    );
+    tl.fromTo(
+      ".last",
+      {
+        y: -200,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "Power1.ease",
+      }
+    );
+    tl.from(".circleFirst", {
+      scale: 0.1,
+      duration: 1,
+      ease: "Power1.ease",
+    });
+  }, []);
 
   return (
     <HomeStyled className="home" id="home">
@@ -22,7 +48,7 @@ const Home = () => {
         <h2>Front-End Developer</h2>
       </HomeContent>
 
-      <div className="circleFirst" ref={ref}></div>
+      <div className="circleFirst"></div>
       <div className="circleSecond"></div>
       <div className="circleThird"></div>
     </HomeStyled>

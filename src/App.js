@@ -32,17 +32,30 @@ function App() {
 
   useEffect(() => {
     const scroll = new locomotiveScroll({
-      el: scrollRef.current,
+      el: document.querySelector("#container"),
       smooth: true,
+      lerp: 0.06,
+      multiplier: 0.5,
     });
-  });
+  }, []);
 
   return (
     <>
       <ThemeProvider theme={themeMode}>
         <GlobalStyle />
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
-        <div id="container" className="scroll" ref={scrollRef} data-scroll>
+        <Navbar
+          theme={theme}
+          toggleTheme={toggleTheme}
+          data-scroll
+          data-scroll-sticky
+          data-scroll-target
+        />
+        <div
+          id="container"
+          className="scroll"
+          ref={scrollRef}
+          data-scroll-speed="5"
+        >
           <Home />
           <About />
           {/* <Experience  /> */}
