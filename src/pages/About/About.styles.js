@@ -10,6 +10,11 @@ export const AboutStyled = styled.section`
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
+
+  .tags {
+    font-size: clamp(20px, 2vw, 30px);
+    // color: red;
+  }
 `;
 
 export const AboutContent = styled.div`
@@ -17,6 +22,16 @@ export const AboutContent = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
+  }
+`;
+
+export const Tag = styled.li`
+  font-size: 50px;
+  color: white;
+
+  a {
+    color: white;
+    font-size: 50px;
   }
 `;
 

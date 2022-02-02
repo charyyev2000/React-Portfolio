@@ -5,8 +5,43 @@ import {
   AboutContentText,
   AboutStyled,
   IconCloudStyled,
+  Tag,
 } from "./About.styles";
+
 import { Cloud } from "react-icon-cloud";
+
+const skills = [
+  {
+    name: "HTML",
+  },
+  {
+    name: "CSS",
+  },
+  {
+    name: "JavaScript",
+  },
+  {
+    name: "SCSS",
+  },
+  {
+    name: "React",
+  },
+  {
+    name: "Redux",
+  },
+  {
+    name: "Tailwind",
+  },
+  {
+    name: "Figma",
+  },
+  {
+    name: "GIT",
+  },
+  {
+    name: "Github",
+  },
+];
 
 const About = () => {
   return (
@@ -22,7 +57,31 @@ const About = () => {
           section<span>.</span>
         </AboutContentText>
       </AboutContent>
-      <IconCloudStyled></IconCloudStyled>
+      {/* <IconCloudStyled> */}
+      {/* <IconCloud /> */}
+      <Cloud>
+        <ul>
+          {skills.map((item, i) => {
+            return (
+              <Tag
+                href=""
+                style={{
+                  color: "white",
+                  fontSize: "50px",
+                  height: "40px",
+                  fontWeight: 900,
+                  fontSize: 100,
+                }}
+              >
+                <a data-weight="100" href="">
+                  {item.name}
+                </a>
+              </Tag>
+            );
+          })}
+        </ul>
+      </Cloud>
+      {/* </IconCloudStyled> */}
     </AboutStyled>
   );
 };
