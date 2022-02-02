@@ -43,8 +43,8 @@ const Home = () => {
   return (
     <HomeStyled className="home" id="home">
       <HomeContent>
-        <h1 className="name">name</h1>
-        <h1 className="last">last</h1>
+        <h1 className="name">Myrat</h1>
+        <h1 className="last">Charyyev</h1>
         <h2>Front-End Developer</h2>
       </HomeContent>
 
