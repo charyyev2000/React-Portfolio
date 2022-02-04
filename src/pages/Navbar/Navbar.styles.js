@@ -44,10 +44,6 @@ export const Links = styled.h1`
     left: 0%;
     background: black;
     z-index: 100;
-
-    h1 {
-      font-size: 40px;
-    }
   }
 
   .active {
@@ -55,9 +51,14 @@ export const Links = styled.h1`
   }
 
   h1 {
-    margin-right: 20px;
+    margin-right: 30px;
     cursor: pointer;
     font-weight: 500;
+    font-size: 20px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
 
     color: ${({ theme }) => theme.primary};
     text-decoration: none;

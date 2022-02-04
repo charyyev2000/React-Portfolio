@@ -82,7 +82,7 @@ export const HomeContent = styled.div`
   }
 
   h1 {
-    font-size: clamp(60px, 8vw, 120px);
+    font-size: clamp(50px, 8vw, 120px);
     color: ${({ theme }) => theme.primary};
     letter-spacing: 2px;
     font-weight: 800;

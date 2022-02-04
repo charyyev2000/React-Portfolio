@@ -38,7 +38,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   return (
     <NavbarStyled className="navbar" data-scroll-sticky>
-      <Logo className="logo">Sh</Logo>
+      <Logo className="logo">ch</Logo>
       <Links open={open} setOpen={setOpen}>
         {links.map((link, id) => {
           return (
@@ -74,7 +74,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       <ContactStyled className="home_aside">
         <a
-          href="https://github.com/ShatlykBerdiyew"
+          href="https://github.com/charyyev2000"
           title="Github"
           target="_blank"
           rel="noopener noreferrer"
@@ -82,7 +82,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           <Icon icon="iconoir:github-outline" />
         </a>
         <a
-          href="https://t.me/shatlykberdiyev"
+          href="https://t.me/myrat_charyyev"
           title="Telegram"
           target="_blank"
           rel="noopener noreferrer"
@@ -90,7 +90,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           <Icon icon="tabler:brand-telegram" />
         </a>
         <a
-          href="mailto:ShatlykBerdiev@gmail.com"
+          href="mailto:charyyev2018@mail.ru"
           target="_blank"
           rel="noopener noreferrer"
         >

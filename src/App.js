@@ -46,22 +46,23 @@ function App() {
         <Navbar
           theme={theme}
           toggleTheme={toggleTheme}
-          data-scroll
-          data-scroll-sticky
-          data-scroll-target
+          // data-scroll
+          // data-scroll-sticky
+          // data-scroll-target
         />
         <div
           id="container"
           className="scroll"
           ref={scrollRef}
-          data-scroll-speed="5"
+          data-scroll-speed="2"
+          style={{ padding: "0 0 10vh" }}
         >
           <Home />
           <About />
           <Experience />
           <Projects />
           <footer className="footer">
-            <h1>Designed & Built by Charyyev Myrat</h1>
+            <h1>Designed & Built by Myrat Charyyev</h1>
           </footer>
         </div>
       </ThemeProvider>
