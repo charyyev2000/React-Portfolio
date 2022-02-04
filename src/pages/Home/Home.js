@@ -33,18 +33,23 @@ const Home = () => {
         ease: "Power1.ease",
       }
     );
-    tl.from(".circleFirst", {
-      scale: 0.1,
+    tl.from("h2", {
+      opacity: 0,
       duration: 1,
-      ease: "Power1.ease",
+      delay: 0.5,
     });
+    // tl.from(".circleFirst", {
+    //   scale: 0.1,
+    //   duration: 1,
+    //   ease: "Power1.ease",
+    // });
   }, []);
 
   return (
     <HomeStyled className="home" id="home">
       <HomeContent>
-        <h1 className="name">Myrat</h1>
-        <h1 className="last">Charyyev</h1>
+        <h1 className="name">name</h1>
+        <h1 className="last">last</h1>
         <h2>Front-End Developer</h2>
       </HomeContent>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Cloud } from "react-icon-cloud";
+import styledComponents from "styled-components";
 
 const skills = [
   {
@@ -37,7 +38,11 @@ const IconCloud = () => {
   return (
     <Cloud>
       {skills.map((item, i) => {
-        return <a href="">{item.name}</a>;
+        return (
+          <a href="" className="skill">
+            {item.name}
+          </a>
+        );
       })}
     </Cloud>
   );

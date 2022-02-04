@@ -9,9 +9,12 @@ import {
   Toggle,
 } from "./Navbar.styles";
 import { Icon } from "@iconify/react";
+import { useRef } from "react/cjs/react.production.min";
+import { useEffect } from "react/cjs/react.development";
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [open, setOpen] = useState(false);
+  // const ref = useRef(null);
 
   const links = [
     {
@@ -35,6 +38,10 @@ const Navbar = ({ theme, toggleTheme }) => {
       name: "Projects",
     },
   ];
+
+  // useEffect(() => {
+
+  // },[])
 
   return (
     <NavbarStyled className="navbar" data-scroll-sticky>

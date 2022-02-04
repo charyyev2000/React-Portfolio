@@ -13,7 +13,7 @@ export const NavbarStyled = styled.nav`
 `;
 
 export const Logo = styled.h1`
-  font-size: clamp(50px, 7vw, 120px);
+  font-size: clamp(50px, 7vw, 100px);
   color: ${({ theme }) => theme.secondary};
   letter-spacing: 2px;
   font-weight: 900;
