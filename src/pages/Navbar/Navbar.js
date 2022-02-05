@@ -11,9 +11,12 @@ import {
 import { Icon } from "@iconify/react";
 import { useRef } from "react/cjs/react.production.min";
 import { useEffect } from "react/cjs/react.development";
+import gsap from "gsap/all";
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [open, setOpen] = useState(false);
+  const tl = gsap.timeline();
+  // const navRef = useRef();
   // const ref = useRef(null);
 
   const links = [
@@ -40,8 +43,18 @@ const Navbar = ({ theme, toggleTheme }) => {
   ];
 
   // useEffect(() => {
-
-  // },[])
+  //   tl.from(
+  //     ".navbar",
+  //     {
+  //       opacity: 0,
+  //       y: -200,
+  //       stagger: 0.1,
+  //       duration: 0.8,
+  //       ease: "back.out(1.7",
+  //     },
+  //     "Start"
+  //   );
+  // }, []);
 
   return (
     <NavbarStyled className="navbar" data-scroll-sticky>
@@ -60,7 +73,7 @@ const Navbar = ({ theme, toggleTheme }) => {
               isDynamic={true}
               ignoreCancelEvents={false}
             >
-              <h1 onClick={() => setOpen(!open)}>
+              <h1 onClick={() => setOpen(!open)} className="navbar">
                 <span>{link.no}</span>
                 {link.name}
               </h1>

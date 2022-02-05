@@ -65,6 +65,7 @@ const About = () => {
             return (
               <Tag
                 href=""
+                key={i}
                 style={{
                   color: "white",
                   fontSize: "50px",
