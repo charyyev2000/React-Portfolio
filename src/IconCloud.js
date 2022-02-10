@@ -52,7 +52,7 @@ export default function IconCloud({ data, companies }) {
   const ImgATag = data.map((item) =>
     renderImg({
       imgProps: {
-        src: imgLink + item.logo,
+        // src: imgLink + item.logo,
         alt: item.title,
         width: 880,
         height: 880,
@@ -68,7 +68,7 @@ export default function IconCloud({ data, companies }) {
     <div style={{ zIndex: 100 }}>
       <Cloud
         containerProps={containerProps}
-        // style= {{
+        // style={{
         //   // padding: "500px",
         //   display: "flex",
         //   justifyContent: "center",

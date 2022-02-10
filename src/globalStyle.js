@@ -1,4 +1,3 @@
-import styledComponents from "styled-components";
 import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -10,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
 html, body {
     font-size: 62.5%;
-    // overflow: hidden;
+    overflow-x: hidden;
     max-width:100vw;
     scroll-behavior: smooth;
 }
@@ -53,7 +52,6 @@ body {
     margin-bottom: 20px;
   }
 }
-
 `;
 
 export const darkTheme = {
